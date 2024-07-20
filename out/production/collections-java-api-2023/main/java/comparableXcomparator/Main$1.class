@@ -1,0 +1,14 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+package main.java.comparableXcomparator;
+
+import java.util.ArrayList;
+
+class Main$1 extends ArrayList<Livro> {
+   Main$1() {
+      this.add(new Livro("Java - Guia do Programador: Atualizado Para Java 16", "Peter Jandl Junior", 2021));
+      this.add(new Livro("Desenvolvimento Real de Software: Um guia de projetos para fundamentos em Java", "Raoul-Gabriel Urma e  Richard Warburton", 2021));
+      this.add(new Livro("Microsservi\u00e7os Prontos Para a Produ\u00e7\u00e3o: Construindo Sistemas Padronizados em uma Organiza\u00e7\u00e3o de Engenharia de Software", "Susan J. Fowler", 2017));
+      this.add(new Livro("Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos", "Aditya Y. Bhargava", 2017));
+      this.add(new Livro("Kotlin em A\u00e7\u00e3o", "Dmitry Jemerov e Svetlana Isakova", 2017));
+   }
+}

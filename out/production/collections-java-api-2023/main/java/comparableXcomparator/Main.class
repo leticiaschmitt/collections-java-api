@@ -1,0 +1,68 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+package main.java.comparableXcomparator;
+
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+public class Main {
+   public Main() {
+   }
+
+   public static void main(String[] args) {
+      System.out.println("---------------------------------------");
+      ArrayList<Livro> livros = new 1();
+      System.out.println("Livros ap\u00f3s a ordena\u00e7\u00e3o natural (T\u00edtulo): ");
+      Collections.sort(livros);
+      Iterator var2 = livros.iterator();
+
+      PrintStream var10000;
+      String var10001;
+      Livro livro;
+      while(var2.hasNext()) {
+         livro = (Livro)var2.next();
+         var10000 = System.out;
+         var10001 = livro.getTitulo();
+         var10000.println(var10001 + " - " + livro.getAutor() + " - " + livro.getAno());
+      }
+
+      System.out.println("---------------------------------------");
+      System.out.println("Livros ap\u00f3s a ordena\u00e7\u00e3o por ano: ");
+      Collections.sort(livros, new CompararAno());
+      var2 = livros.iterator();
+
+      int var4;
+      while(var2.hasNext()) {
+         livro = (Livro)var2.next();
+         var10000 = System.out;
+         var4 = livro.getAno();
+         var10000.println("" + var4 + " - " + livro.getTitulo() + " - " + livro.getAutor());
+      }
+
+      System.out.println("---------------------------------------");
+      System.out.println("Livros ap\u00f3s a ordena\u00e7\u00e3o por autor: ");
+      Collections.sort(livros, new CompararAutor());
+      var2 = livros.iterator();
+
+      while(var2.hasNext()) {
+         livro = (Livro)var2.next();
+         var10000 = System.out;
+         var10001 = livro.getAutor();
+         var10000.println(var10001 + " - " + livro.getTitulo() + " - " + livro.getAno());
+      }
+
+      System.out.println("---------------------------------------");
+      System.out.println("Livros ap\u00f3s a ordena\u00e7\u00e3o por ano, autor e t\u00edtulo: ");
+      Collections.sort(livros, new CompararAnoAutorTitulo());
+      var2 = livros.iterator();
+
+      while(var2.hasNext()) {
+         livro = (Livro)var2.next();
+         var10000 = System.out;
+         var4 = livro.getAno();
+         var10000.println("" + var4 + " - " + livro.getAutor() + " - " + livro.getTitulo());
+      }
+
+   }
+}
